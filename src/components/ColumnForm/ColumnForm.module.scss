@@ -1,1 +1,27 @@
 @import '../../styles/settings.scss';
+
+.columnForm{
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 10px;
+flex-wrap: wrap;
+
+input{
+  padding: 13px 3px 13px 0;
+border-radius: 7px;
+margin-right: 10px;
+position: relative;
+}
+
+.columnFormTitle{
+  margin-right: 7px;
+}
+
+// Button {
+//   position: absolute;
+// right: 300px;
+// bottom: 85px;
+// }
+
+}
