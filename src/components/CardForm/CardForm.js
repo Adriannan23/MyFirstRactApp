@@ -2,7 +2,6 @@ import styles from './CardForm.module.scss';
 import { useState } from 'react';
 import Button from '../Button/Button';
 import TextInput from './../TextInput/TextInput';
-// import List from './../List/List';
 
 const CardForm = props => {
   const [title, setTitle] = useState('');
@@ -11,12 +10,12 @@ const CardForm = props => {
     props.action({ title: title }, props.columnId);
     setTitle('');
   };
-
+  console.log(props);
   return (
     <form className={styles.cardForm} onSubmit={handleSubmit}>
       <TextInput value={title} onChange={e => setTitle(e.target.value)} />
       <Button>Add card</Button>
-      {/* <CardForm columnId={props.id} action={addCard} /> */}
+
     </form>
 
   );

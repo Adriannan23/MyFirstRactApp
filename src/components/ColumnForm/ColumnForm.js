@@ -6,6 +6,7 @@ import Button from '../Button/Button';
 const ColumnForm = props => {
   const [title, setTitle] = useState('');
   const [icon, setIcon] = useState('');
+
   const handleSubmit = e => {
     e.preventDefault();
     props.action({ title: title, icon: icon });

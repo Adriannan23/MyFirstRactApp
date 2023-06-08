@@ -7,14 +7,14 @@ import List from '../List/List';
 const Column = props => {
 
   return (
-
     <article className={styles.column}>
 
       <h2 className={styles.title}> <span className={styles.icon + ' fa fa-' + props.icon} />{props.title}</h2>
       <ul className={styles.cards}>
-        {props.cards.map(card => <Card key={card.id} title={card.title} />)}
+        {props.cards.map(card =>
+          <Card key={card.id} title={card.title} />)}
       </ul>
-      {/* <CardForm action={addCard} /> */}
+      <CardForm columnId={props.id} action={props.addCardAction} />
     </article>
   );
 };
