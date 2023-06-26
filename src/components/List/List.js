@@ -6,7 +6,6 @@ import { useSelector } from 'react-redux';
 const List = () => {
 
   const columns = useSelector(state => state.columns);
-  const cards = useSelector(state => state.cards);
 
   return (
     <div className={styles.list}>

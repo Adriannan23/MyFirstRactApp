@@ -4,17 +4,16 @@ import Button from '../Button/Button';
 import TextInput from './../TextInput/TextInput';
 import { useDispatch } from 'react-redux';
 
-const CardForm = props => {
+const CardForm = ({ columnId }) => {
   const [title, setTitle] = useState('');
 
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch({ type: 'ADD_CARD', payload: { title } });
+    dispatch({ type: 'ADD_CARD', payload: { title, columnId } });
     setTitle('');
   };
 
   const dispatch = useDispatch();
-  console.log(props);
   return (
     <form className={styles.cardForm} onSubmit={handleSubmit}>
       <TextInput value={title} onChange={e => setTitle(e.target.value)} />
