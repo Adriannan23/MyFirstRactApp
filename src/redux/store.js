@@ -10,6 +10,8 @@ export const getAllColumns = state => state.columns;
 
 // action creators
 export const addColumn = payload => ({ type: 'ADD_COLUMN', payload });
+export const addCard = payload => ({ type: 'ADD_CARD', payload });
+export const updateSearching = payload => ({ type: 'UPDATE_SEARCHSTRING', payload });
 
 // to tu przechowujemy całą logikę do zmiany danych z centrali
 // modyfikacja danych

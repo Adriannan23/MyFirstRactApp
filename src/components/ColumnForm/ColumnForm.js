@@ -4,7 +4,6 @@ import Button from '../Button/Button';
 import { useDispatch } from 'react-redux';
 import { addColumn } from '../../redux/store';
 
-
 const ColumnForm = props => {
   const [title, setTitle] = useState('');
   const [icon, setIcon] = useState('');
