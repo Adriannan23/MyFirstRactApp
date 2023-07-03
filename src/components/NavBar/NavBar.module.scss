@@ -1,5 +1,6 @@
 @import '../../styles/settings.scss';
 
+
 .navBar {
   background-color: darken($color-dark, 3%);
 }
@@ -23,6 +24,9 @@ a{
 }
 }
 .navLinks{
+  .linkActive{
+    color: $color-warning;
+  }
 ul {
   display: flex;
   display: row;
