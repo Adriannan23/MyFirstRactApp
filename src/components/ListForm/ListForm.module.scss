@@ -1,0 +1,18 @@
+.listForm{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  flex-wrap: wrap;
+
+  input{
+    padding: 13px 3px 13px 0;
+  border-radius: 7px;
+  margin-right: 10px;
+  position: relative;
+  }
+
+  .listFormTitle{
+    margin-right: 7px;
+  }
+}

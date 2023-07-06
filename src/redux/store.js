@@ -17,7 +17,10 @@ export const getAllLists = state => state.lists;
 // action creators
 export const addColumn = payload => ({ type: 'ADD_COLUMN', payload });
 export const addCard = payload => ({ type: 'ADD_CARD', payload });
+
 export const updateSearching = payload => ({ type: 'UPDATE_SEARCHSTRING', payload });
+
+export const addListForm = payload => ({ type: 'ADD_LIST_FORM', payload });
 
 // to tu przechowujemy całą logikę do zmiany danych z centrali
 // modyfikacja danych
@@ -34,6 +37,12 @@ const reducer = (state, action) => {
     case 'UPDATE_SEARCHSTRING':
 
       return { ...state, searchString: action.payload };
+
+    case 'TOGGLE_CARD_FAVORITE':
+      return { ...state, cards: state.cards.map(card => (card.id === action.payload) ? { ...card, isFavorite: !card.isFavorite } : card) };
+
+    case 'ADD_LIST_FORM':
+      return { ...state, lists: [...state.lists, { ...action.payload, id: shortid() }] };
 
     default: return state;
   }
