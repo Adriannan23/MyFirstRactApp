@@ -12,6 +12,21 @@
     font-weight: bold;
 }
 
-.columnIcon{
-    color: red;
-}
+.starButton {
+    border: none;
+    background-color: transparent;
+  }
+
+  .starButton:hover {
+    cursor: pointer;
+  }
+
+  .isActive{
+    border: none;
+    background-color: transparent;
+    color: orange;
+  }
+
+  .isActive:hover{
+    cursor: pointer;
+  }

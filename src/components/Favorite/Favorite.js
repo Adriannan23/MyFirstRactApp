@@ -1,13 +1,23 @@
 import styles from './Favorite.module.scss';
 import PageTitle from '../PageTitle/PageTitle';
+import { getAllActiveCards } from '../../redux/store';
+import { useSelector } from 'react-redux';
+import Card from './../Card/Card';
 
 
-const Favorite = () => {
+const Favorite = props => {
+
+  const activeCards = useSelector(state => getAllActiveCards(state, props.id));
 
   return (
     <div>
       <PageTitle>Favorite</PageTitle>
-      <p>Lorem ipsum</p>
+      <div>
+        <ul className={styles.cards}>
+          {activeCards.map(card =>
+            <Card key={card.id} id={card.id} title={card.title} />)}
+        </ul>
+      </div>
     </div>
   );
 };
