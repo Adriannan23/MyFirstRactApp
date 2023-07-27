@@ -1,5 +1,17 @@
 import shortid from 'shortid';
-const ADD_LIST = 'app/lists/ADD_LIST';
+
+//selectors
+export const getListById = ({ lists }, listId) => lists.find(list => list.id === listId);
+
+export const getAllLists = state => state.lists;
+
+//actions
+const createActionName = actionName => `app/lists/${actionName}`;
+const ADD_LIST = createActionName('ADD_LIST_FORM');
+
+//action creators
+export const addListForm = payload => ({ type: ADD_LIST, payload });
+
 const listsReducer = (statePart = [], action) => {
 
   switch (action.type) {

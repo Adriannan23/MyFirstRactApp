@@ -1,5 +1,5 @@
 import styles from './ListForm.module.scss';
-import { addListForm } from '../../redux/store';
+import { addListForm } from '../../redux/listsRedux';
 import { useState } from 'react';
 import Button from '../Button/Button';
 import { useDispatch } from 'react-redux';
