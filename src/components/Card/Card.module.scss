@@ -15,10 +15,24 @@
 .starButton {
     border: none;
     background-color: transparent;
+    color: grey;
   }
 
   .starButton:hover {
     cursor: pointer;
+    color: black;
+  }
+
+  .trashButton{
+    border: none;
+    background-color: transparent;
+    color: grey;
+  }
+
+  .trashButton:hover {
+    cursor: pointer;
+    background-color: transparent;
+    color: black;
   }
 
   .isActive{

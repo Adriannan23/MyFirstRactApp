@@ -3,6 +3,8 @@ import clsx from 'clsx';
 import { toggleCardFavorite } from '../../redux/store';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { removeCard } from '../../redux/removeRedux';
+
 
 const Card = (props) => {
   const [favoriteCard, setFavoriteCard] = useState(false);
@@ -13,6 +15,10 @@ const Card = (props) => {
     setFavoriteCard(!favoriteCard);
   };
 
+  const handleRemoveCard = () => {
+    dispatch(removeCard(props.id)); // Dispatch the action with the card ID as the payload
+  };
+
   return (
     <div>
       <li className={styles.card}>
@@ -21,6 +27,10 @@ const Card = (props) => {
           <button
             className={clsx('fa fa-star-o', styles.starButton, favoriteCard && styles.isActive)}
             onClick={handleToggleFavorite}
+          ></button>
+          <button
+            className={clsx('fa fa-trash', styles.trashButton)}
+            onClick={handleRemoveCard}
           ></button>
         </div>
       </li>

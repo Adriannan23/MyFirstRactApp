@@ -9,6 +9,8 @@ const Favorite = props => {
 
   const activeCards = useSelector(state => getAllActiveCards(state, props.id));
 
+  console.log()
+
   return (
     <div>
       <PageTitle>Favorite</PageTitle>
